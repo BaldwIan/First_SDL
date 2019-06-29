@@ -54,9 +54,7 @@ void Game::handleEvents()
 }
 
 void Game::update()
-{
-
-}
+{}
 
 void Game::render()
 {
