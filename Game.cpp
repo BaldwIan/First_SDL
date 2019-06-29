@@ -2,6 +2,8 @@
 #include "TextureManager.h"
 #include "GameObject.h"
 
+SDL_Renderer *Game::renderer = nullptr;
+
 GameObject *player;
 GameObject *monkey;
 
@@ -42,8 +44,8 @@ void Game::init(const char *title, int xPos, int yPos, int width, int height, bo
 		isRunning = false;
 	}
 
-	player = new GameObject("assets/player.png", renderer, 0, 0);
-	monkey = new GameObject("assets/monkey.png", renderer, -45, 45);
+	player = new GameObject("assets/player.png", 0, 0);
+	monkey = new GameObject("assets/monkey.png", -45, 45);
 }
 
 void Game::handleEvents()
